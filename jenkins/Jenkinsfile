@@ -1,0 +1,8 @@
+node('node-16'){
+    stage('Get code') {
+        checkout scm
+    }
+    stage('node build') {
+        sh 'chmod +x jenkins/build.sh;./jenkins/build.sh'
+    }
+}
